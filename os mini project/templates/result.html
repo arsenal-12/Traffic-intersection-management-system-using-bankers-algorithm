@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Resources Result</title>
+    <style>
+        body {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:url("{{ url_for('static', filename='traffic.jpg') }}");
+    background-position: center;
+    background-size: cover;
+
+        }
+
+        .container {
+            text-align: center;
+            margin-bottom: 340px;
+        }
+
+        .result-box {
+            background-color: rgba(255, 255, 255, 0.7); 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+        }
+
+        .results {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Safe sequence for traffic intersection management:</h1>
+        <div class="result-box">
+            <p class="results">{{ results }}</p>
+        </div>
+    </div>
+</body>
+</html>

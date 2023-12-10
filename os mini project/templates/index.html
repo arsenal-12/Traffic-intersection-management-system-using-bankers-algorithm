@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calculator {
+            background-color: #333;
+            border: 2px solid #444;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 500px;
+        }
+
+        .calculator label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .calculator input {
+            background-color: #444;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            margin: 5px;
+            padding: 10px;
+            width: 50px;
+            text-align: center;
+        }
+
+        .calculator .btn{
+            width: 100px;
+            height: 45px;
+            background: blue;
+            border:none;
+            outline:none;
+            border-radius: 6px;
+            color:white;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            
+
+        }
+
+        .calculator .btn:hover {
+            background-color: grey;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Traffic Management System</h1>
+        <form method="POST" action="/process_input">
+            <label for="number_of_lanes">Number of Lanes:</label>
+            <input type="text" name="number_of_lanes" required><br>
+
+            <label for="number_of_traffic_lights">Number of Traffic Lights:</label>
+            <input type="text" name="number_of_traffic_lights" required><br>
+
+            <label for="system_available_resources">System Available Resources (separated by spaces):</label>
+            <input type="text" name="system_available_resources" required><br>
+
+            <label for="max_claim">Max Claim (one row per lane, separated by newlines):</label>
+            <textarea name="max_claim" required></textarea><br>
+
+            <label for="allocation">Allocation (one row per lane, separated by newlines):</label>
+            <textarea name="allocation" required></textarea><br>
+
+            <input type="submit" class="btn" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
